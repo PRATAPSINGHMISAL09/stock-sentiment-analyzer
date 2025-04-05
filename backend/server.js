@@ -15,13 +15,13 @@ const MONGO_URI = process.env.MONGO_URI;
 
 mongoose
   .connect(MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("MongoDB Connection Error:", err));
 
 app.get("/", (req, res) => {
-  res.send("🚀 API is running...");
+  res.send("API is running...");
 });
 
 app.use("/api/tweets", tweetRoutes);
 
-app.listen(PORT, () => console.log(`🟢 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

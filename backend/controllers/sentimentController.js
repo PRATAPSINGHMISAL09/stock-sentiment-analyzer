@@ -14,7 +14,7 @@ export const analyzeAndStore = async (req, res) => {
       return { text, score };
     });
 
-    // Save in DB
+    //Save in DB
     const newRecord = new SentimentModel({
       symbol,
       tweets: analyzedTweets,

@@ -21,10 +21,10 @@ const fetchTweets = async (stockSymbol) => {
       tweets.push(tweet.text);
     }
 
-    console.log(`✅ Scraped ${tweets.length} tweets for ${stockSymbol}`);
+    console.log(`Scraped ${tweets.length} tweets for ${stockSymbol}`);
     return tweets;
   } catch (error) {
-    console.error("❌ Error fetching tweets:", error.data ?? error.message);
+    console.error("Error fetching tweets:", error.data ?? error.message);
     return [];
   }
 };
